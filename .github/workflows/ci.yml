@@ -4,8 +4,19 @@ on:
   push:
     branches: [main]
   pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
+  house:
+    uses: neolunadev/.github/.github/workflows/house.yml@main
+    with:
+      markdownlint: false
+      allow-data: false
+
   test:
     runs-on: windows-latest
     steps:
