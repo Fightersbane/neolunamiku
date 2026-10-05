@@ -1,5 +1,7 @@
 # neolunaruby
 
+Studio rules arrive from the neolunadev-backbone plugin. Resume: HANDOFF.md.
+
 Accessibility tool: the user types, a Hatsune Miku voice speaks into a virtual
 microphone or a Discord voice channel. Strictly private, non-commercial use -
 never redistribute the Miku RVC model or any generated voice content. Public

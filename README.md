@@ -6,6 +6,8 @@ Type a message and hear it spoken in a Hatsune Miku voice - in a Discord call, a
 
 Everything runs on your own GPU. Text goes through [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx) (local TTS), then RVC voice conversion with a community Miku model. Warm latency is about 1.1 s on an RTX 3060 Ti at under 1 GB of VRAM, so games run fine alongside it. No cloud services in the voice path.
 
+Related repos: [hq](https://github.com/neolunadev/hq) (the map of every project), [neolunafrontend](https://github.com/neolunadev/neolunafrontend) (brand, tokens, shared CSS).
+
 ## What works today (v0.2.0)
 
 - **Desktop app** (`python -m app.main`): say box, global-hotkey overlay, system tray, message history with replay, GPU and latency readouts, settings for voice, speed, pitch, and devices.
