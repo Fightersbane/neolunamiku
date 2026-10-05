@@ -9,3 +9,6 @@ logs/
 dist/
 staging/
 *.wav
+
+# Loose debugging screenshots at the root.
+/image.png
