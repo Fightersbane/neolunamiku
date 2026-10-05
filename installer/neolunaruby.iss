@@ -41,11 +41,11 @@ Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription:
 Source: "..\staging\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
 
 [Icons]
-Name: "{group}\{#AppName}"; Filename: "{app}\neolunaruby.cmd"; IconFilename: "{app}\assets\neolunaruby.ico"; WorkingDir: "{app}"
-Name: "{userdesktop}\{#AppName}"; Filename: "{app}\neolunaruby.cmd"; IconFilename: "{app}\assets\neolunaruby.ico"; WorkingDir: "{app}"; Tasks: desktopicon
+Name: "{group}\{#AppName}"; Filename: "{sys}\WindowsPowerShell\v1.0\powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File ""{app}\installer\bootstrap.ps1"""; WorkingDir: "{app}"; IconFilename: "{app}\assets\neolunaruby.ico"; WorkingDir: "{app}"
+Name: "{userdesktop}\{#AppName}"; Filename: "{sys}\WindowsPowerShell\v1.0\powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File ""{app}\installer\bootstrap.ps1"""; WorkingDir: "{app}"; IconFilename: "{app}\assets\neolunaruby.ico"; WorkingDir: "{app}"; Tasks: desktopicon
 
 [Run]
-Filename: "{app}\neolunaruby.cmd"; Description: "Launch {#AppName} (first launch sets things up)"; Flags: nowait postinstall skipifsilent
+Filename: "{sys}\WindowsPowerShell\v1.0\powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File ""{app}\installer\bootstrap.ps1"""; WorkingDir: "{app}"; Description: "Launch {#AppName} (first launch sets things up)"; Flags: nowait postinstall skipifsilent
 
 [UninstallDelete]
 ; Generated at runtime, not tracked by the installer
